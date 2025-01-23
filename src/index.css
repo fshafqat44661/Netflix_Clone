@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+    .text-xs {
+      font-size: 0.53rem /* 12px */;
+      line-height: 0.8rem /* 16px */;
+    }
+  }
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+
+/* Dropdown container */
+.custom-dropdown-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Dropdown button */
+.custom-dropdown-button {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db; /* Gray-300 */
+  background-color: #ffffff; /* White */
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  color: #374151; /* Gray-700 */
+  outline: none;
+  position: relative;
+}
+
+/* Dropdown options container */
+.custom-dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 8px;
+  background-color: #ffffff; /* White */
+  border: 1px solid #d1d5db; /* Gray-300 */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Dropdown option */
+.custom-dropdown-option {
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #374151; /* Gray-700 */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for dropdown option */
+.custom-dropdown-option:hover {
+  background-color: #374151; /* Gray-700 */
+  color: #ffffff; /* White */
+}
